@@ -1,0 +1,155 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:#f5f5f5;
+    line-height:1.7;
+}
+
+main,
+header,
+footer{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    color:#bb86fc;
+    margin-bottom:10px;
+}
+
+header h2{
+    color:#d3b3ff;
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+header p{
+    color:#cccccc;
+}
+
+hr{
+    border:none;
+    height:2px;
+    background:#7b2cff;
+    margin:35px 0;
+}
+
+section{
+    background:#1b1b1b;
+    padding:25px;
+    margin:25px 0;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(123,44,255,.25);
+}
+
+section h2{
+    color:#bb86fc;
+    margin-bottom:15px;
+    border-left:5px solid #7b2cff;
+    padding-left:10px;
+}
+
+section h3{
+    margin-top:15px;
+    color:#d8b4ff;
+}
+
+section p{
+    margin-top:10px;
+}
+
+img{
+    display:block;
+    margin:auto;
+    width:220px;
+    border-radius:50%;
+    border:4px solid #7b2cff;
+    box-shadow:0 0 20px rgba(123,44,255,.5);
+}
+
+ul{
+    margin-left:25px;
+    margin-top:15px;
+}
+
+li{
+    margin:10px 0;
+}
+
+a{
+    color:#c792ff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+a:hover{
+    color:#ffffff;
+    text-decoration:underline;
+}
+
+nav ul{
+    list-style:none;
+    margin-left:0;
+}
+
+nav li{
+    margin:12px 0;
+}
+
+nav a{
+    display:block;
+    background:#2a2a2a;
+    padding:14px;
+    border-left:5px solid #7b2cff;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#7b2cff;
+    color:white;
+    transform:translateX(8px);
+}
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    color:#cfcfcf;
+}
+
+footer p{
+    margin:8px 0;
+}
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    header h2{
+        font-size:1.1rem;
+    }
+
+    section{
+        padding:18px;
+    }
+
+    img{
+        width:170px;
+    }
+
+}
