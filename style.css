@@ -1,155 +1,210 @@
+/* =========================================================
+   style.css — Tema escuro roxo com GRID + FLEXBOX
+   ========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#111;
-    color:#f5f5f5;
-    line-height:1.7;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #f5f5f5;
+    line-height: 1.7;
+
+    /* GRID GERAL: cabeçalho / conteúdo / rodapé */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 main,
 header,
-footer{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
+footer {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-header{
-    text-align:center;
-    padding:40px 20px;
+/* ---------- CABEÇALHO (FLEXBOX) ---------- */
+header {
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
 
-header h1{
-    font-size:3rem;
-    color:#bb86fc;
-    margin-bottom:10px;
+header h1 {
+    font-size: 3rem;
+    color: #bb86fc;
 }
 
-header h2{
-    color:#d3b3ff;
-    font-weight:normal;
-    margin-bottom:20px;
+header h2 {
+    color: #d3b3ff;
+    font-weight: normal;
 }
 
-header p{
-    color:#cccccc;
+header p {
+    color: #cccccc;
 }
 
-hr{
-    border:none;
-    height:2px;
-    background:#7b2cff;
-    margin:35px 0;
+hr {
+    border: none;
+    height: 2px;
+    background: #7b2cff;
+    margin: 35px 0;
+    width: 100%;
 }
 
-section{
-    background:#1b1b1b;
-    padding:25px;
-    margin:25px 0;
-    border-radius:12px;
-    box-shadow:0 0 12px rgba(123,44,255,.25);
+/* ---------- MAIN (GRID) ---------- */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 10px 0 40px;
 }
 
-section h2{
-    color:#bb86fc;
-    margin-bottom:15px;
-    border-left:5px solid #7b2cff;
-    padding-left:10px;
+/* main é grid, então os <hr> viram linhas separadoras */
+main > hr {
+    margin: 0;
 }
 
-section h3{
-    margin-top:15px;
-    color:#d8b4ff;
+/* ---------- SEÇÕES (FLEXBOX INTERNO) ---------- */
+section {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(123, 44, 255, .25);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-section p{
-    margin-top:10px;
+section h2 {
+    color: #bb86fc;
+    border-left: 5px solid #7b2cff;
+    padding-left: 10px;
 }
 
-img{
-    display:block;
-    margin:auto;
-    width:220px;
-    border-radius:50%;
-    border:4px solid #7b2cff;
-    box-shadow:0 0 20px rgba(123,44,255,.5);
+section h3 {
+    color: #d8b4ff;
+    margin-top: 5px;
 }
 
-ul{
-    margin-left:25px;
-    margin-top:15px;
+/* ---------- FOTO ---------- */
+img {
+    display: block;
+    margin: auto;
+    width: 220px;
+    border-radius: 50%;
+    border: 4px solid #7b2cff;
+    box-shadow: 0 0 20px rgba(123, 44, 255, .5);
 }
 
-li{
-    margin:10px 0;
+/* ---------- LISTA DE CONHECIMENTOS (GRID) ---------- */
+section > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
 }
 
-a{
-    color:#c792ff;
-    text-decoration:none;
-    transition:.3s;
+section > ul > li {
+    background: #232323;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #7b2cff;
 }
 
-a:hover{
-    color:#ffffff;
-    text-decoration:underline;
+/* ---------- LINKS ---------- */
+a {
+    color: #c792ff;
+    text-decoration: none;
+    transition: .3s;
 }
 
-nav ul{
-    list-style:none;
-    margin-left:0;
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-nav li{
-    margin:12px 0;
+/* ---------- NAVEGAÇÃO (GRID DE CARTÕES) ---------- */
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
 }
 
-nav a{
-    display:block;
-    background:#2a2a2a;
-    padding:14px;
-    border-left:5px solid #7b2cff;
-    border-radius:8px;
-    transition:.3s;
+nav a {
+    /* FLEXBOX: centraliza o texto verticalmente no cartão */
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+
+    background: #2a2a2a;
+    padding: 14px;
+    border-left: 5px solid #7b2cff;
+    border-radius: 8px;
+    transition: .3s;
 }
 
-nav a:hover{
-    background:#7b2cff;
-    color:white;
-    transform:translateX(8px);
+nav a:hover {
+    background: #7b2cff;
+    color: #fff;
+    text-decoration: none;
+    transform: translateX(8px);
 }
 
-footer{
-    text-align:center;
-    padding:35px 20px;
-    color:#cfcfcf;
+/* ---------- RODAPÉ (FLEXBOX) ---------- */
+footer {
+    padding: 35px 20px;
+    color: #cfcfcf;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 20px;
+    text-align: center;
 }
 
-footer p{
-    margin:8px 0;
+footer hr {
+    flex-basis: 100%;
+    margin: 0 0 15px;
 }
-@media(max-width:768px){
 
-    header h1{
-        font-size:2.2rem;
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.2rem;
     }
 
-    header h2{
-        font-size:1.1rem;
+    header h2 {
+        font-size: 1.1rem;
     }
 
-    section{
-        padding:18px;
+    section {
+        padding: 18px;
     }
 
-    img{
-        width:170px;
+    img {
+        width: 170px;
     }
 
+    nav ul,
+    section > ul {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
 }
