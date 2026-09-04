@@ -1,300 +1,124 @@
 <!DOCTYPE html>
+<!-- ===========================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+     Estrutura do template preservada. Escolha um dos temas
+     (tema-1-indigo.css, tema-2-escuro.css ou tema-3-editorial.css)
+     e salve como estilo.css na mesma pasta.
+     ============================================================ -->
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-    <title>
-        Erick Morgan — Programação Web 1
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Erick Morgan</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
+  <div class="pagina">
 
-    <!-- ========================= -->
-    <!-- CABEÇALHO -->
-    <!-- ========================= -->
-
-    <header>
-
-        <h1>
-            Erick Morgan
-        </h1>
-
-        <h2>
-            Técnico em Desenvolvimento de Sistemas — IFAL
-        </h2>
-
-        <p>
-            Página principal das atividades de Programação Web 1.
-        </p>
-
-        <hr>
-
+    <!-- ====== CABEÇALHO ====== -->
+    <header class="cabecalho">
+      <h1>Erick Morgan</h1>
+      <p>Técnico em Desenvolvimento de Sistemas · IFAL — Programação Web 1</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </header>
 
-    <!-- ========================= -->
-    <!-- CONTEÚDO PRINCIPAL -->
-    <!-- ========================= -->
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <img src="erick.jpeg" alt="Foto de Erick Morgan" width="220">
+        <p>
+          Olá, sou Erick Morgan, nasci em 15 de julho de 2010, tenho 15 anos e
+          moro em Maceió - AL. Gosto muito de jogos de estratégia e jogos de
+          guerra, astronomia, astrofísica e desenhar. Estou cursando o 1° ano
+          junto com o curso Técnico em Desenvolvimento de Sistemas no Instituto
+          Federal de Alagoas (IFAL) e quero ingressar na Aeronáutica.
+        </p>
+        <p>
+          <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas"
+             target="_blank">
+            Saiba mais sobre o curso de Desenvolvimento de Sistemas no IFAL
+          </a>
+        </p>
+      </section>
 
-    <main>
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um cartão -->
+        <div class="projetos">
 
-        <section>
-
-            <img src="erick.jpeg"
-                 alt="Foto de Erick Morgan"
-                 width="220"
-
-        </section>
-
-        <section>
-
-            <h2>
-                Informações Pessoais
-            </h2>
-
-            <h3>
-                Data de nascimento
-            </h3>
-
-            <p>
-                15 de julho de 2010
-            </p>
-
-            <h3>
-                Descrição pessoal
-            </h3>
-
-            <p>
-                Olá, sou Erick Morgan, tenho 15 anos e moro em Maceió - AL.
-                Gosto muito de jogos de estratégia e jogos de guerra,
-                astronomia, astrofísica e desenhar.
-                Estou cursando o 1° ano junto com o curso Técnico em
-                Desenvolvimento de Sistemas no IFAL e quero ingressar
-                na Aeronáutica.
-            </p>
-
-        </section>
-
-        <hr>
-
-        <!-- CONHECIMENTOS -->
-        <section>
-
-            <h2>
-                Conhecimentos na Área
-            </h2>
-
+          <article class="projeto">
+            <h3>Capítulo 4 — Tabelas, Listas e Multimídia</h3>
             <ul>
-
-                <li>
-                    Desenvolvimento de Sistemas
-                </li>
-
-                <li>
-                    Programação Web
-                </li>
-
-                <li>
-                    Robótica
-                </li>
-
-                <li>
-                    Área técnica de foguetes
-                </li>
-
-                <li>
-                    Veterano no War Thunder
-                </li>
-
+              <li><a href="cap04/at01.html">AT01 — Tabela Básica</a></li>
+              <li><a href="cap04/at02.html">AT02 — Tabela Semântica</a></li>
+              <li><a href="cap04/at03.html">AT03 — Listas Avançadas</a></li>
+              <li><a href="cap04/at04.html">AT04 — Página Multimídia</a></li>
             </ul>
+          </article>
 
-        </section>
+          <article class="projeto">
+            <h3>Capítulo 5 — Formulários HTML</h3>
+            <ul>
+              <li><a href="cap05/at01.html">AT01 — Formulário de Contato</a></li>
+              <li><a href="cap05/at02.html">AT02 — Cadastro de Usuário</a></li>
+              <li><a href="cap05/at03.html">AT03 — Matrícula Acadêmica</a></li>
+              <li><a href="cap05/at04.html">AT04 — Inscrição em Evento</a></li>
+              <li><a href="cap05/at05.html">AT05 — Pesquisa Acadêmica</a></li>
+            </ul>
+          </article>
 
-        <hr>
+          <article class="projeto">
+            <h3>Capítulo CSS — Estilização com CSS</h3>
+            <ul>
+              <li><a href="capcss/index.html">AT01 — Formulário de Inscrição Estilizado</a></li>
+              <li><a href="cap07/atv01.html">AT02 — Formulário de Inscrição coisado</a></li>
+            </ul>
+          </article>
 
-        <!-- LINK DO CURSO -->
-        <section>
-
-            <h2>
-                Curso Técnico no IFAL
-            </h2>
-
-            <p>
-                Estou realizando o curso Técnico em Desenvolvimento
-                de Sistemas no Instituto Federal de Alagoas (IFAL).
-            </p>
-
-            <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas"
-               target="_blank">
-
-                Saiba mais sobre o curso de Desenvolvimento de Sistemas no IFAL
-
-            </a>
-
-        </section>
-
-        <hr>
-
-        <!-- ========================= -->
-        <!-- CAPÍTULO 4 -->
-        <!-- ========================= -->
-
-        <section>
-
-            <h2>
-                Capítulo 4 — Tabelas, Listas e Multimídia
-            </h2>
-
-            <nav aria-label="Atividades do Capítulo 4">
-
-                <ul>
-
-                    <li>
-                        <a href="cap04/at01.html">
-                            AT01 — Tabela Básica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap04/at02.html">
-                            AT02 — Tabela Semântica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap04/at03.html">
-                            AT03 — Listas Avançadas
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap04/at04.html">
-                            AT04 — Página Multimídia
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </section>
-
-        <hr>
-
-        <!-- ========================= -->
-        <!-- CAPÍTULO 5 -->
-        <!-- ========================= -->
-
-        <section>
-
-            <h2>
-                Capítulo 5 — Formulários HTML
-            </h2>
-
-            <nav aria-label="Atividades do Capítulo 5">
-
-                <ul>
-
-                    <li>
-                        <a href="cap05/at01.html">
-                            AT01 — Formulário de Contato
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at02.html">
-                            AT02 — Cadastro de Usuário
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at03.html">
-                            AT03 — Matrícula Acadêmica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at04.html">
-                            AT04 — Inscrição em Evento
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at05.html">
-                            AT05 — Pesquisa Acadêmica
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </section>
-
-        <hr>
-
-<hr>
-
-<!-- ========================= -->
-<!-- CAPÍTULO CSS -->
-<!-- ========================= -->
-
-<section>
-
-    <h2>
-        Capítulo CSS — Estilização com CSS
-    </h2>
-
-    <nav aria-label="Atividade CSS">
-
-        <ul>
-
-            <li>
-                <a href="capcss/index.html">
-                    AT01 — Formulário de Inscrição Estilizado
-                </a>
-            </li>
-            <li>
-                <a href="cap07/atv01.html">
-                    AT02 — Formulário de Inscrição coisado
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</section>
+        </div>
+      </section>
     </main>
 
-    <footer>
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <ul class="habilidades">
+          <li>Desenvolvimento de Sistemas</li>
+          <li>Programação Web</li>
+          <li>Robótica</li>
+          <li>Área técnica de foguetes</li>
+          <li>Veterano no War Thunder</li>
+        </ul>
+      </section>
 
-        <hr>
+      <section id="contato" class="cartao">
+        <h2>(82) 98774-7793</h2>
+        <!-- TROQUE pelos seus links reais -->
+        <ul class="contato">
+          <li>✉️ <a href="mailto:emms3@aluno.ifal.edu.br">erick@exemplo.com</a></li>
+          <li>🐙 <a href="https://github.com/emms3-arch">github.com/emms3-arch</a></li>
+          <li>📍 Maceió - AL</li>
+          <li>🎓 Turma 911C · Desenvolvimento de Sistemas</li>
+        </ul>
+      </section>
+    </aside>
 
-        <p>
-            Feito por Erick Morgan — Programação Web 1
-        </p>
-
-        <p>
-            Turma: 911C
-        </p>
-
-        <p>
-            Curso: Desenvolvimento de Sistemas
-        </p>
-
-        <p>
-            Desenvolvido no VS Code
-        </p>
-
-        <p>
-            Maceió - AL
-        </p>
-
+    <!-- ====== RODAPÉ ====== -->
+    <footer class="rodape">
+      © 2026 Erick Morgan · Programação Web 1 · Turma 911C · feito com HTML + CSS Grid · Desenvolvido no VS Code
     </footer>
 
+  </div>
 </body>
 
 </html>
